@@ -69,13 +69,13 @@ class DescriptionPage extends StatelessWidget {
                 children: [
                   Container(
                     decoration: const BoxDecoration(
-                  color: Colors.black,
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: NetworkImage(
-                        'https://img.freepik.com/fotos-gratis/cachorro-golden-retriever-fofo-com-um-chapeu-marrom-isolado-em-amarelo_181624-51691.jpg?w=826&t=st=1659989318~exp=1659989918~hmac=44c884acca99974fcae2651151476b28d97e58d20b4c475f08420a0718cf9fef'),
-                  ),
-                ),
+                      color: Colors.black,
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: NetworkImage(
+                            'https://img.freepik.com/fotos-gratis/cachorro-golden-retriever-fofo-com-um-chapeu-marrom-isolado-em-amarelo_181624-51691.jpg?w=826&t=st=1659989318~exp=1659989918~hmac=44c884acca99974fcae2651151476b28d97e58d20b4c475f08420a0718cf9fef'),
+                      ),
+                    ),
                     height: 300,
                     child: CardAvatar(),
                   ),
@@ -83,21 +83,21 @@ class DescriptionPage extends StatelessWidget {
               )
             ],
           ),
-          // Positioned(
-          //     left: 120,
-          //     top: 150,
-          //     child: Container(
-          //       height: 300,
-          //       width: 200,
-          //       decoration: const BoxDecoration(
-          //         color: Colors.black,
-          //         image: DecorationImage(
-          //           fit: BoxFit.cover,
-          //           image: NetworkImage(
-          //               'https://img.freepik.com/fotos-gratis/cachorro-golden-retriever-fofo-com-um-chapeu-marrom-isolado-em-amarelo_181624-51691.jpg?w=826&t=st=1659989318~exp=1659989918~hmac=44c884acca99974fcae2651151476b28d97e58d20b4c475f08420a0718cf9fef'),
-          //         ),
-          //       ),
-          //     )),
+          Positioned(
+              left: 120,
+              top: 150,
+              child: Container(
+                height: 300,
+                width: 200,
+                decoration: const BoxDecoration(
+                  color: Colors.black,
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(
+                        'https://img.freepik.com/fotos-gratis/cachorro-golden-retriever-fofo-com-um-chapeu-marrom-isolado-em-amarelo_181624-51691.jpg?w=826&t=st=1659989318~exp=1659989918~hmac=44c884acca99974fcae2651151476b28d97e58d20b4c475f08420a0718cf9fef'),
+                  ),
+                ),
+              )),
         ],
       ),
     );

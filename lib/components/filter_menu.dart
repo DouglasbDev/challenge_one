@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class FilterMenu extends StatelessWidget {
   const FilterMenu({Key? key}) : super(key: key);
@@ -10,7 +11,13 @@ class FilterMenu extends StatelessWidget {
       width: 50,
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(20)),
-      child: const Icon(Icons.dehaze_rounded),
+      child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: SvgPicture.asset(
+          'assets/switch.svg',
+          color: Colors.grey,
+        ),
+      ),
     );
   }
 }

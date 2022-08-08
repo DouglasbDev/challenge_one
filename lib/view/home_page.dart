@@ -1,7 +1,13 @@
+import 'dart:ui';
+
 import 'package:challange_one/components/cicle_avatar_widget.dart';
 import 'package:challange_one/components/filter_menu.dart';
-import 'package:challange_one/model/button_model.dart';
+import 'package:challange_one/controller/button_model.dart';
+import 'package:challange_one/controller/card_home_list.dart';
+import 'package:challange_one/model/card_home_model.dart';
+import 'package:challange_one/widgets/button_home_widget.dart';
 import 'package:challange_one/widgets/button_widget.dart';
+import 'package:challange_one/widgets/card_menu_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,14 +17,12 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-var listMenu = button;
-
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 8.0),
+        padding: const EdgeInsets.only(top: 24),
         child: Column(
           children: [
             Padding(
@@ -30,7 +34,11 @@ class _HomePageState extends State<HomePage> {
                   Column(
                     children: const [
                       Text('Location'),
-                      Text('Cameron St., Boston')
+                      Text(
+                        'Cameron St., Boston',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18),
+                      )
                     ],
                   ),
                   const CicleAvatarWidget()
@@ -45,11 +53,47 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.grey[200],
                   child: Column(
                     children: [
-                      Row(
-                        children: [
-                          FilterMenu(),
-                         
-                        ],
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            const FilterMenu(),
+                            const SizedBox(width: 15),
+                            SizedBox(
+                              height: 73,
+                              child: ListView.separated(
+                                  padding: const EdgeInsets.all(10),
+                                  shrinkWrap: true,
+                                  scrollDirection: Axis.horizontal,
+                                  separatorBuilder: (context, _) =>
+                                      const SizedBox(
+                                        width: 15,
+                                      ),
+                                  itemCount: items.length,
+                                  itemBuilder: (context, index) =>
+                                      ButtonHome(items: items[index])),
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Expanded(
+                        child: SizedBox(
+                          height: 180,
+                          child: ListView.separated(
+                              padding: const EdgeInsets.all(10),
+                              shrinkWrap: true,
+                              scrollDirection: Axis.vertical,
+                              separatorBuilder: (context, _) => const SizedBox(
+                                    height: 15,
+                                  ),
+                              itemCount: map.length,
+                              itemBuilder: (context, index) => cardMenu(
+                                    map: map[index],
+                                  )),
+                        ),
                       )
                     ],
                   ),

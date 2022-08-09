@@ -6,9 +6,11 @@ class CardAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 300,
+    return SizedBox(
+      height: 270,
       child: ListView.separated(
+        scrollDirection: Axis.vertical,
+        shrinkWrap: true,
         separatorBuilder: (context, _) => const SizedBox(
           height: 4,
         ),

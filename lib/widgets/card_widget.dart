@@ -34,13 +34,26 @@ class CardTest extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
               ),
-              child: SizedBox(
+              child: Padding(
+                padding: const EdgeInsets.only(right: 15, bottom: 5),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        const Icon(
+                          Icons.favorite_border,
+                          color: Colors.grey,
+                        )
+                      ],
+                    ),
                     Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(top: 20, left: 10),
+                          padding: const EdgeInsets.only(left: 10, right: 10),
                           child: Container(
                             width: 100,
                             height: 100,
@@ -57,55 +70,47 @@ class CardTest extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 22),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    map[index].title,
-                                    style: const TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(width: 90),
-                                  const Icon(
-                                    Icons.favorite_border,
-                                    color: Colors.grey,
-                                  )
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 7,
-                              ),
-                              Text(
-                                map[index].subtitle,
-                                style: const TextStyle(fontSize: 12),
-                              ),
-                              const SizedBox(
-                                height: 7,
-                              ),
-                              Text(
-                                map[index].infotitle,
-                                style: const TextStyle(fontSize: 12),
-                              ),
-                              const SizedBox(
-                                height: 5,
-                              ),
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: const [
-                                  Icon(
-                                    Icons.location_on,
-                                    color: Colors.red,
-                                  ),
-                                  Text('2.6 kms away')
-                                ],
-                              )
-                            ],
-                          ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  map[index].title,
+                                  style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                const SizedBox(width: 90),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 7,
+                            ),
+                            Text(
+                              map[index].subtitle,
+                              style: const TextStyle(fontSize: 12),
+                            ),
+                            const SizedBox(
+                              height: 7,
+                            ),
+                            Text(
+                              map[index].infotitle,
+                              style: const TextStyle(fontSize: 12),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Row(
+                              children: const [
+                                Icon(
+                                  Icons.location_on,
+                                  color: Colors.red,
+                                ),
+                                Text('2.6 kms away')
+                              ],
+                            )
+                          ],
                         )
                       ],
                     )

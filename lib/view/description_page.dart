@@ -57,6 +57,7 @@ class DescriptionPage extends StatelessWidget {
               ],
             ),
           )
+          
         ],
       ),
     );

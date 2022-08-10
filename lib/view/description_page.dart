@@ -55,7 +55,8 @@ class DescriptionPage extends StatelessWidget {
                       ),
                       Text(
                         ' 8 moths old',
-                        style: TextStyle(fontWeight: FontWeight.w600),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600, color: Colors.black87),
                       ),
                     ],
                   ),
@@ -127,8 +128,7 @@ class DescriptionPage extends StatelessWidget {
                         decoration: const BoxDecoration(
                           color: Color.fromARGB(255, 241, 67, 67),
                           borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(30),
-                            bottomRight: Radius.circular(30),
+                            topLeft: Radius.circular(50),
                           ),
                         ),
                         child: Row(
@@ -138,7 +138,7 @@ class DescriptionPage extends StatelessWidget {
                               Icons.pets,
                               color: Colors.white,
                             ),
-                            SizedBox(width: 8),
+                            SizedBox(width: 15),
                             Text(
                               'ADOPT',
                               style:

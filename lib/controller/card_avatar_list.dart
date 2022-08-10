@@ -6,14 +6,14 @@ List<CardAvatar> avatar = [
           'https://img.freepik.com/fotos-gratis/golden-retriever-branco-posando-no-estudio-com-um-lenco-amarelo-e-jaqueta-jeans_181624-51744.jpg?w=996&t=st=1659987920~exp=1659988520~hmac=a4a75db85fcb3ee05304fd3338761c1ba5ad3449ba99fcf1c1715a1626b95473'),
   CardAvatar(
     urlImage:
-        'https://img.freepik.com/fotos-gratis/adoravel-cachorrinho-golden-retriever-fofo-mostrando-a-lingua_181624-24612.jpg?w=900&t=st=1659987931~exp=1659988531~hmac=55c8d1456115b3542a3525306be3fd72e5ea2225dd3f027a408e9abf4e071a91',
+        'https://img.freepik.com/fotos-gratis/retriever-dourado-branco-posando-em-estudio-com-roupas-de-rua-e-oculos-de-artista-musical_181624-57207.jpg?w=996&t=st=1660131135~exp=1660131735~hmac=32fe4a7081dd458ca42ea39c74f620505546bb471ba1ca62191d96eb279013e3',
   ),
   CardAvatar(
     urlImage:
-        'https://img.freepik.com/fotos-gratis/adoravel-cachorrinho-golden-retriever-fofo-mostrando-a-lingua_181624-24612.jpg?w=900&t=st=1659987931~exp=1659988531~hmac=55c8d1456115b3542a3525306be3fd72e5ea2225dd3f027a408e9abf4e071a91',
+        'https://img.freepik.com/fotos-gratis/cachorro-golden-retriever-fofo-com-um-chapeu-marrom-isolado-em-amarelo_181624-51691.jpg?w=996&t=st=1660130798~exp=1660131398~hmac=72023fd24908946d77db04cc2bfda40f5adfa90a854530e84a3bcf77d55cc79d',
   ),
   CardAvatar(
     urlImage:
-        'https://img.freepik.com/fotos-gratis/adoravel-cachorrinho-golden-retriever-fofo-mostrando-a-lingua_181624-24612.jpg?w=900&t=st=1659987931~exp=1659988531~hmac=55c8d1456115b3542a3525306be3fd72e5ea2225dd3f027a408e9abf4e071a91',
+        'https://img.freepik.com/fotos-gratis/close-de-um-golden-retriever-piloto-isolado-em-amarelo_181624-54316.jpg?w=996&t=st=1660131284~exp=1660131884~hmac=8b5ca67751e13aa3480565ce5763d36748f1f77c38356b1a509160f9358c2a55',
   ),
 ];

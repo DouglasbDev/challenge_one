@@ -17,18 +17,21 @@ class CardAvatar extends StatelessWidget {
         itemCount: avatar.length,
         itemBuilder: (context, index) => Column(
           children: [
-            Container(
-              width: 120,
-              height: 100,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.white,
-                  width: 8,
-                ),
-                borderRadius: BorderRadius.circular(12),
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: NetworkImage(avatar[index].urlImage),
+            AspectRatio(
+              aspectRatio: 5 / 4,
+              child: Container(
+                width: 120,
+                height: 100,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.white,
+                    width: 8,
+                  ),
+                  borderRadius: BorderRadius.circular(12),
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(avatar[index].urlImage),
+                  ),
                 ),
               ),
             ),

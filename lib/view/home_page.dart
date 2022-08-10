@@ -2,12 +2,13 @@ import 'dart:ui';
 
 import 'package:challange_one/components/cicle_avatar_widget.dart';
 import 'package:challange_one/components/filter_menu.dart';
-import 'package:challange_one/controller/button_model.dart';
+import 'package:challange_one/controller/button_list.dart';
 import 'package:challange_one/controller/card_home_list.dart';
 import 'package:challange_one/model/card_home_model.dart';
 import 'package:challange_one/widgets/button_home_widget.dart';
 import 'package:challange_one/widgets/button_widget.dart';
 import 'package:challange_one/widgets/card_menu_widget.dart';
+import 'package:challange_one/widgets/card_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -76,25 +77,7 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                       ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Expanded(
-                        child: SizedBox(
-                          height: 180,
-                          child: ListView.separated(
-                              padding: const EdgeInsets.all(10),
-                              shrinkWrap: true,
-                              scrollDirection: Axis.vertical,
-                              separatorBuilder: (context, _) => const SizedBox(
-                                    height: 15,
-                                  ),
-                              itemCount: map.length,
-                              itemBuilder: (context, index) => cardMenu(
-                                    map: map[index],
-                                  )),
-                        ),
-                      )
+                      CardTest()
                     ],
                   ),
                 ),

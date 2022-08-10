@@ -10,4 +10,5 @@ class CardHome {
     required this.subtitle,
     required this.infotitle,
   });
+
 }

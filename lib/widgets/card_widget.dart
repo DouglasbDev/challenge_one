@@ -2,8 +2,8 @@ import 'package:challange_one/view/description_page.dart';
 import 'package:flutter/material.dart';
 import '../controller/card_home_list.dart';
 
-class CardTest extends StatelessWidget {
-  CardTest({super.key});
+class CardHomeWidget extends StatelessWidget {
+  CardHomeWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

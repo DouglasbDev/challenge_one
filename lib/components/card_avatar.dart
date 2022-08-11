@@ -7,31 +7,27 @@ class CardAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 270,
+      height: 300,
       child: ListView.separated(
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
         separatorBuilder: (context, _) => const SizedBox(
-          height: 4,
+          height: 5,
         ),
         itemCount: avatar.length,
         itemBuilder: (context, index) => Column(
           children: [
-            AspectRatio(
-              aspectRatio: 5 / 4,
-              child: Container(
-                width: 120,
-                height: 100,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 8,
-                  ),
-                  borderRadius: BorderRadius.circular(12),
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: NetworkImage(avatar[index].urlImage),
-                  ),
+            Container(
+              height: 100,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.white,
+                  width: 1,
+                ),
+                borderRadius: BorderRadius.circular(20),
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(avatar[index].urlImage),
                 ),
               ),
             ),

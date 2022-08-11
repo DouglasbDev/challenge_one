@@ -6,7 +6,7 @@ import 'package:challange_one/controller/button_list.dart';
 import 'package:challange_one/controller/card_home_list.dart';
 import 'package:challange_one/model/card_home_model.dart';
 import 'package:challange_one/widgets/button_home_widget.dart';
-import 'package:challange_one/widgets/button_widget.dart';
+
 import 'package:challange_one/widgets/card_menu_widget.dart';
 import 'package:challange_one/widgets/card_widget.dart';
 import 'package:flutter/material.dart';
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                       ),
-                      CardTest()
+                      CardHomeWidget()
                     ],
                   ),
                 ),

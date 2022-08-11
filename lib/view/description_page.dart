@@ -22,6 +22,20 @@ class DescriptionPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Stack(
           children: [
+            Positioned(
+                right: 20,
+                top: 100,
+                child: Container(
+                  height: 300,
+                  width: 180,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: NetworkImage(
+                          'https://img.freepik.com/fotos-gratis/retriever-dourado-bonito_144627-26658.jpg?w=740&t=st=1660158825~exp=1660159425~hmac=d02ffe13579e6f7bd6d52e751aa11ccd0676407aa8939dd677758b69b924eab8'),
+                    ),
+                  ),
+                )),
             Column(
               children: [
                 Padding(
@@ -30,7 +44,7 @@ class DescriptionPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
                       Text(
-                        'Sparky',
+                        'Spark',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 30),
                       ),
@@ -42,7 +56,7 @@ class DescriptionPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 20, left: 15),
@@ -62,7 +76,7 @@ class DescriptionPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 Row(
                   children: const [
@@ -82,15 +96,15 @@ class DescriptionPage extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Padding(
-                      padding: EdgeInsets.only(right: 220),
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(right: 216, left: 25),
                       child: CardAvatar(),
                     ),
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 15, left: 18),
+                  padding: const EdgeInsets.only(top: 10, left: 18),
                   child: Row(
                     children: const [
                       Text(
@@ -106,9 +120,9 @@ class DescriptionPage extends StatelessWidget {
                     Flexible(
                       child: Container(
                         padding: const EdgeInsets.only(left: 18, right: 13.0),
-                        height: 114,
+                        height: 155,
                         child: const Text(
-                          'The Golden Retriever, an exuberant Scottish gundog of great beauty, stands among Americas most popular dog breeds. They are serious workers at hunting and field work, as guides for the blind, and in search-and-rescue, enjoy obedience and other competitive events, and have an endearing love of life when not at work.',
+                          'The Golden Retriever, an exuberant Scottish gundog of great beauty, stands among Americas most popular dog breeds. They are serious workers at hunting and field work, as guides for the blind, and in search-and-rescue, enjoy obedience and other competitive events, and have an endearing love of life when not at work. The Golden Retriever is a sturdy, muscular dog of medium size, famous for the dense, lustrous coat of gold that gives the breed its name. The broad head, with its friendly and intelligent eyes, short ears, and straight muzzle, is a breed hallmark.',
                           overflow: TextOverflow.clip,
                           style: TextStyle(fontSize: 12, color: Colors.grey),
                         ),
@@ -116,8 +130,8 @@ class DescriptionPage extends StatelessWidget {
                     )
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0),
+                SizedBox(
+                  height: 105,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.end,
@@ -152,20 +166,6 @@ class DescriptionPage extends StatelessWidget {
                 )
               ],
             ),
-            Positioned(
-                left: 148,
-                top: 70,
-                child: Container(
-                  height: 300,
-                  width: 180,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: NetworkImage(
-                          'https://img.freepik.com/fotos-gratis/retriever-dourado-bonito_144627-26660.jpg?w=740&t=st=1660048684~exp=1660049284~hmac=e5fc6c8b4deed93eca4d5d01ebb2aff303d5ecabea7aa21bacae9aef1d71a06c'),
-                    ),
-                  ),
-                )),
           ],
         ),
       ),

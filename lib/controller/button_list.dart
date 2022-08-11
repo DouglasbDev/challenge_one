@@ -2,8 +2,6 @@ import 'package:challange_one/model/button_class.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../widgets/button_widget.dart';
-
 List<ButtonItem> items = [
   ButtonItem(
     icon: SvgPicture.asset(

@@ -1,5 +1,6 @@
-import 'package:challange_one/model/card_home_model.dart';
 import 'package:flutter/material.dart';
+
+import '../model/card_home_model.dart';
 
 Widget cardMenu({required CardHome map}) => Material(
       color: Colors.white,

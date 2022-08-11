@@ -1,5 +1,4 @@
-import 'package:challange_one/view/description_page.dart';
-import 'package:challange_one/view/home_page.dart';
+import 'package:desafio/view/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

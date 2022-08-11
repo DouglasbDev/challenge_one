@@ -1,5 +1,3 @@
-import 'package:challange_one/widgets/card_menu_widget.dart';
-
 import '../model/card_home_model.dart';
 
 List<CardHome> map = [
@@ -7,7 +5,7 @@ List<CardHome> map = [
     image:
         'https://img.freepik.com/fotos-premium/cachorro-golden-retriever-sentado-e-ofegante_191971-7865.jpg?w=826',
     title: 'Spark',
-    subtitle: 'Golden Retriver',
+    subtitle: 'Golden Retriever',
     infotitle: 'Male, 8 moths old',
   ),
   CardHome(
@@ -27,7 +25,7 @@ List<CardHome> map = [
   CardHome(
     image:
         'https://img.freepik.com/fotos-premium/foto-de-estudio-de-cachorro-beagle-em-fundo-verde-do-estudio_155003-36319.jpg?w=1380',
-    title: 'Ja',
+    title: 'Luna',
     subtitle: 'Beagle',
     infotitle: 'Female, 5 moths old',
   ),

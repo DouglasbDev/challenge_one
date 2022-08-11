@@ -1,6 +1,6 @@
 {
-    "name": "challange_one",
-    "short_name": "challange_one",
+    "name": "desafio",
+    "short_name": "desafio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

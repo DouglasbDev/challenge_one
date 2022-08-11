@@ -1,6 +1,7 @@
-import 'package:challange_one/model/button_class.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../model/button_class.dart';
 
 List<ButtonItem> items = [
   ButtonItem(

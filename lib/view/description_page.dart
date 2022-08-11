@@ -1,7 +1,8 @@
-import 'package:challange_one/components/card_avatar.dart';
-import 'package:challange_one/components/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../components/card_avatar.dart';
+import '../components/favorite_button.dart';
 
 class DescriptionPage extends StatelessWidget {
   const DescriptionPage({super.key});
@@ -15,7 +16,7 @@ class DescriptionPage extends StatelessWidget {
         backgroundColor: Colors.white,
         shadowColor: Colors.white,
         elevation: 0,
-        actions: [
+        actions: const [
           FavoriteButton(),
         ],
       ),
@@ -64,7 +65,7 @@ class DescriptionPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
                       Text(
-                        'Golden Retriver',
+                        'Golden Retriever',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(

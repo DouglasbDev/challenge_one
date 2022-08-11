@@ -1,15 +1,9 @@
-import 'dart:ui';
-
-import 'package:challange_one/components/cicle_avatar_widget.dart';
-import 'package:challange_one/components/filter_menu.dart';
-import 'package:challange_one/controller/button_list.dart';
-import 'package:challange_one/controller/card_home_list.dart';
-import 'package:challange_one/model/card_home_model.dart';
-import 'package:challange_one/widgets/button_home_widget.dart';
-
-import 'package:challange_one/widgets/card_menu_widget.dart';
-import 'package:challange_one/widgets/card_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../components/cicle_avatar_widget.dart';
+import '../components/filter_menu.dart';
+import '../widgets/button_widget.dart';
+import '../widgets/card_widget.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -57,22 +51,12 @@ class _HomePageState extends State<HomePage> {
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
-                          children: [
-                            const FilterMenu(),
-                            const SizedBox(width: 15),
+                          children: const [
+                            FilterMenu(),
+                            SizedBox(width: 15),
                             SizedBox(
                               height: 73,
-                              child: ListView.separated(
-                                  padding: const EdgeInsets.all(10),
-                                  shrinkWrap: true,
-                                  scrollDirection: Axis.horizontal,
-                                  separatorBuilder: (context, _) =>
-                                      const SizedBox(
-                                        width: 15,
-                                      ),
-                                  itemCount: items.length,
-                                  itemBuilder: (context, index) =>
-                                      ButtonHome(items: items[index])),
+                              child: ButtonWidget(),
                             )
                           ],
                         ),

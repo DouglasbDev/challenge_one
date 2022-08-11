@@ -18,7 +18,7 @@ class FavoriteButton extends StatelessWidget {
             height: 10,
             width: 50,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
-            child: Icon(
+            child: const Icon(
               Icons.favorite,
               color: Colors.grey,
             ),

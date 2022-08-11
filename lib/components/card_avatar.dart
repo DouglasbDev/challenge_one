@@ -1,5 +1,6 @@
-import 'package:challange_one/controller/card_avatar_list.dart';
 import 'package:flutter/material.dart';
+
+import '../controller/card_avatar_list.dart';
 
 class CardAvatar extends StatelessWidget {
   const CardAvatar({Key? key}) : super(key: key);

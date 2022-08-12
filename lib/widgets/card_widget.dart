@@ -30,17 +30,8 @@ class CardHomeWidget extends StatelessWidget {
             },
             child: Padding(
               padding: const EdgeInsets.only(right: 15, top: 5),
-              child: Column(
+              child: Row(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: const [
-                      Icon(
-                        Icons.favorite_border,
-                        color: Colors.grey,
-                      )
-                    ],
-                  ),
                   Row(
                     children: [
                       Padding(

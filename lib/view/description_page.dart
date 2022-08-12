@@ -97,8 +97,8 @@ class DescriptionPage extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Padding(
+                  children: const [
+                    Padding(
                       padding: EdgeInsets.only(right: 216, left: 25),
                       child: CardAvatar(),
                     ),

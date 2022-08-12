@@ -1,6 +1,6 @@
+import 'package:desafio/components/cicle_avatar_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../components/cicle_avatar_widget.dart';
 import '../components/filter_menu.dart';
 import '../widgets/button_widget.dart';
 import '../widgets/card_widget.dart';
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
                       )
                     ],
                   ),
-                  const CicleAvatarWidget()
+                  const CircleAvatarWidget()
                 ],
               ),
             ),

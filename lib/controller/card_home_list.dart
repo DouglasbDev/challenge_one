@@ -3,7 +3,7 @@ import '../model/card_home_model.dart';
 List<CardHome> map = [
   CardHome(
     image:
-        'https://img.freepik.com/fotos-premium/cachorro-golden-retriever-sentado-e-ofegante_191971-7865.jpg?w=826',
+        'https://img.freepik.com/fotos-gratis/bela-foto-de-um-golden-retriever-usando-oculos-escuros-e-um-lenco-vermelho_181624-24610.jpg?w=900&t=st=1660518799~exp=1660519399~hmac=5e97cbce9de7ef0fc85aae4677e39297456106d2a12e0b0c69d7b318e95814bc',
     title: 'Spark',
     subtitle: 'Golden Retriever',
     infotitle: 'Male, 8 moths old',

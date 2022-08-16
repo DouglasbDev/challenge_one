@@ -13,14 +13,14 @@ class CardHomeWidget extends StatelessWidget {
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
         separatorBuilder: (context, _) => const SizedBox(
-          height: 15,
+          height: 22,
         ),
         itemCount: map.length,
         itemBuilder: (context, index) => Material(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(14),
           child: InkWell(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(14),
             onTap: () {
               Navigator.push(
                 context,
@@ -28,30 +28,27 @@ class CardHomeWidget extends StatelessWidget {
                     builder: (context) => const DescriptionPage()),
               );
             },
-            child: Padding(
-              padding: const EdgeInsets.only(right: 15, top: 5),
-              child: Row(
-                children: [
-                  Row(
+            child: Stack(
+              children: [
+                Container(
+                  height: 149,
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+                  child: Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: 10, right: 10, bottom: 15),
-                        child: Container(
-                          width: 100,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.white,
-                              width: 8,
-                            ),
-                            borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(map[index].image),
-                            ),
+                      Container(
+                        width: 110,
+                        height: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(17),
+                          image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: NetworkImage(map[index].image),
                           ),
                         ),
+                      ),
+                      SizedBox(
+                        width: 11,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,25 +60,25 @@ class CardHomeWidget extends StatelessWidget {
                                 style: const TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold),
                               ),
-                              const SizedBox(width: 90),
                             ],
                           ),
                           const SizedBox(
-                            height: 7,
+                            height: 9,
                           ),
                           Text(
                             map[index].subtitle,
                             style: const TextStyle(fontSize: 12),
                           ),
                           const SizedBox(
-                            height: 7,
+                            height: 8,
                           ),
                           Text(
                             map[index].infotitle,
-                            style: const TextStyle(fontSize: 12),
+                            style: const TextStyle(
+                                fontSize: 12, color: Colors.grey),
                           ),
                           const SizedBox(
-                            height: 5,
+                            height: 17,
                           ),
                           Row(
                             children: const [
@@ -89,15 +86,23 @@ class CardHomeWidget extends StatelessWidget {
                                 Icons.location_on,
                                 color: Colors.red,
                               ),
-                              Text('2.6 kms away')
+                              Text(
+                                '2.6 kms away',
+                                style: TextStyle(color: Colors.grey),
+                              )
                             ],
                           )
                         ],
                       )
                     ],
-                  )
-                ],
-              ),
+                  ),
+                ),
+                Positioned(
+                  right: 20,
+                  top: 20,
+                  child: Icon(Icons.favorite_border_rounded),
+                ),
+              ],
             ),
           ),
         ),

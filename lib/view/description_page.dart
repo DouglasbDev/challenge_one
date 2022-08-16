@@ -66,19 +66,18 @@ class DescriptionPage extends StatelessWidget {
                     children: const [
                       Text(
                         'Golden Retriever',
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, color: Colors.black87),
                       ),
                       Text(
                         ' 8 moths old',
                         style: TextStyle(
-                            fontWeight: FontWeight.w600, color: Colors.black87),
+                            fontWeight: FontWeight.w500, color: Colors.black87),
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: 5,
-                ),
+                const SizedBox(height: 13),
                 Row(
                   children: const [
                     Padding(
@@ -94,28 +93,31 @@ class DescriptionPage extends StatelessWidget {
                     )
                   ],
                 ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                const SizedBox(height: 43),
+                Row(
                   children: const [
-                    Padding(
-                      padding: EdgeInsets.only(right: 216, left: 25),
+                    SizedBox(
+                      height: 250,
+                      width: 100,
                       child: CardAvatar(),
-                    ),
+                    )
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10, left: 18),
-                  child: Row(
-                    children: const [
-                      Text(
+                Row(
+                  children: const [
+                    Padding(
+                      padding: EdgeInsets.only(
+                        left: 18,
+                      ),
+                      child: Text(
                         'About',
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
+                      ),
+                    )
+                  ],
                 ),
+                const SizedBox(height: 10),
                 Row(
                   children: [
                     Flexible(
@@ -131,38 +133,31 @@ class DescriptionPage extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(
-                  height: 105,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Container(
-                        height: MediaQuery.of(context).size.height / 9,
-                        width: 200,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 241, 67, 67),
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(50),
-                          ),
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: Container(
+                    height: 85,
+                    width: 230,
+                    decoration: const BoxDecoration(
+                      color: Color.fromARGB(255, 241, 67, 67),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(50),
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Icon(
+                          Icons.pets,
+                          color: Colors.white,
                         ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(
-                              Icons.pets,
-                              color: Colors.white,
-                            ),
-                            SizedBox(width: 15),
-                            Text(
-                              'ADOPT',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 20),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
+                        SizedBox(width: 15),
+                        Text(
+                          'ADOPT',
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        )
+                      ],
+                    ),
                   ),
                 )
               ],

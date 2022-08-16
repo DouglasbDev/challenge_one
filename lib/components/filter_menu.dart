@@ -7,10 +7,10 @@ class FilterMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
-      width: 50,
+      height: 45,
+      width: 45,
       decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(20)),
+          color: Colors.white, borderRadius: BorderRadius.circular(17)),
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: SvgPicture.asset(

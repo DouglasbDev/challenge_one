@@ -7,33 +7,38 @@ class CardAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 300,
-      child: ListView.separated(
-        scrollDirection: Axis.vertical,
-        shrinkWrap: true,
-        separatorBuilder: (context, _) => const SizedBox(
-          height: 5,
-        ),
-        itemCount: avatar.length,
-        itemBuilder: (context, index) => Column(
-          children: [
-            Container(
-              height: 100,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.white,
-                  width: 1,
-                ),
-                borderRadius: BorderRadius.circular(20),
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: NetworkImage(avatar[index].urlImage),
+    return ListView.separated(
+      scrollDirection: Axis.vertical,
+      shrinkWrap: true,
+      separatorBuilder: (context, _) => const SizedBox(
+        height: 5,
+      ),
+      itemCount: avatar.length,
+      itemBuilder: (context, index) => Column(
+        children: [
+          SizedBox(
+            height: 79,
+            width: 79,
+            child: AspectRatio(
+              aspectRatio: 3 / 4,
+              child: Container(
+                height: 79,
+                width: 79,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.white,
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.circular(20),
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(avatar[index].urlImage),
+                  ),
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -8,24 +8,23 @@ class ButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-        padding: const EdgeInsets.all(10),
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         separatorBuilder: (context, _) => const SizedBox(
-              width: 15,
+              width: 20,
             ),
         itemCount: items.length,
         itemBuilder: (context, index) => Material(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(17),
               child: InkWell(
                 onTap: () {},
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(17),
                 highlightColor: Colors.grey[200],
                 child: Container(
-                  width: 100,
+                  width: 86,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(17),
                   ),
                   child: Row(
                     children: [
@@ -34,9 +33,11 @@ class ButtonWidget extends StatelessWidget {
                         child: items[index].icon,
                       ),
                       const SizedBox(
-                        width: 10,
+                        width: 9,
                       ),
-                      Text(items[index].title),
+                      Text(
+                        items[index].title,
+                      ),
                     ],
                   ),
                 ),

@@ -28,7 +28,10 @@ class _HomePageState extends State<HomePage> {
                   const Icon(Icons.menu),
                   Column(
                     children: const [
-                      Text('Location'),
+                      Text(
+                        'Location',
+                        style: TextStyle(color: Colors.grey),
+                      ),
                       Text(
                         'Cameron St., Boston',
                         style: TextStyle(
@@ -44,7 +47,8 @@ class _HomePageState extends State<HomePage> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Container(
-                  padding: const EdgeInsets.all(20),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 21),
                   color: Colors.grey[200],
                   child: Column(
                     children: [
@@ -53,14 +57,15 @@ class _HomePageState extends State<HomePage> {
                         child: Row(
                           children: const [
                             FilterMenu(),
-                            SizedBox(width: 15),
+                            SizedBox(width: 17),
                             SizedBox(
-                              height: 73,
+                              height: 46,
                               child: ButtonWidget(),
                             )
                           ],
                         ),
                       ),
+                      const SizedBox(height: 27),
                       CardHomeWidget()
                     ],
                   ),

@@ -16,4 +16,8 @@ List<CardAvatar> avatar = [
     urlImage:
         'https://img.freepik.com/fotos-gratis/close-de-um-golden-retriever-piloto-isolado-em-amarelo_181624-54316.jpg?w=996&t=st=1660131284~exp=1660131884~hmac=8b5ca67751e13aa3480565ce5763d36748f1f77c38356b1a509160f9358c2a55',
   ),
+  CardAvatar(
+    urlImage:
+        'https://img.freepik.com/fotos-gratis/golden-retriever-branco-engracado-vestido-com-jaqueta-jeans-e-capacetes-as-vezes-ouvindo-musica_181624-53394.jpg?w=740&t=st=1660579976~exp=1660580576~hmac=e9a42f17aa28d4a9ca815663e3e933d0d8cce193750dd208f2bdbaebd80d9d93',
+  ),
 ];

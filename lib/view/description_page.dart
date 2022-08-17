@@ -45,7 +45,7 @@ class DescriptionPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
                       Text(
-                        'Spark',
+                        'Sparky',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 30),
                       ),

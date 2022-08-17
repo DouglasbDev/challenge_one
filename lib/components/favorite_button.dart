@@ -11,7 +11,7 @@ class FavoriteButton extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),
         child: InkWell(
-          highlightColor: Colors.red,
+          highlightColor: Colors.grey[400],
           onTap: () {},
           borderRadius: BorderRadius.circular(15),
           child: Container(
@@ -20,7 +20,7 @@ class FavoriteButton extends StatelessWidget {
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
             child: const Icon(
               Icons.favorite,
-              color: Colors.grey,
+              color: Colors.red,
             ),
           ),
         ),

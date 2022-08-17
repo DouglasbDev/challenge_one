@@ -1,12 +1,12 @@
-import 'package:desafio/components/cicle_avatar_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../components/circle_avatar_widget.dart';
 import '../components/filter_menu.dart';
 import '../widgets/button_widget.dart';
 import '../widgets/card_widget.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       const SizedBox(height: 27),
-                      CardHomeWidget()
+                      const CardHomeWidget()
                     ],
                   ),
                 ),

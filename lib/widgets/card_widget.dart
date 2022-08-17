@@ -31,7 +31,7 @@ class CardHomeWidget extends StatelessWidget {
             child: Stack(
               children: [
                 Container(
-                  height: 149,
+                  height: 157,
                   padding:
                       const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
                   child: Row(
@@ -47,9 +47,7 @@ class CardHomeWidget extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        width: 11,
-                      ),
+                      const SizedBox(width: 11),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -97,7 +95,7 @@ class CardHomeWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-                Positioned(
+                const Positioned(
                   right: 20,
                   top: 20,
                   child: Icon(Icons.favorite_border_rounded),

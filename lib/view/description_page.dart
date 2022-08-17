@@ -98,7 +98,7 @@ class DescriptionPage extends StatelessWidget {
                   children: const [
                     SizedBox(
                       height: 250,
-                      width: 100,
+                      width: 90,
                       child: CardAvatar(),
                     )
                   ],

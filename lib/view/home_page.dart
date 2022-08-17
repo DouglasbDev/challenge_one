@@ -32,6 +32,7 @@ class _HomePageState extends State<HomePage> {
                         'Location',
                         style: TextStyle(color: Colors.grey),
                       ),
+                      SizedBox(height: 9),
                       Text(
                         'Cameron St., Boston',
                         style: TextStyle(
@@ -48,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                 borderRadius: BorderRadius.circular(20),
                 child: Container(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 21),
+                      const EdgeInsets.symmetric(horizontal: 13, vertical: 21),
                   color: Colors.grey[200],
                   child: Column(
                     children: [

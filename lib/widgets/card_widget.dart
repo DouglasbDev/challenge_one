@@ -9,7 +9,6 @@ class CardHomeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.separated(
-        padding: const EdgeInsets.only(bottom: 10),
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
         separatorBuilder: (context, _) => const SizedBox(
@@ -30,33 +29,40 @@ class CardHomeWidget extends StatelessWidget {
             },
             child: Stack(
               children: [
-                Container(
-                  height: 157,
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+                SizedBox(
+                  height: 116,
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Container(
-                        width: 110,
-                        height: 110,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(17),
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(map[index].image),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Container(
+                          width: 102,
+                          height: 99,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(17),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(map[index].image),
+                            ),
                           ),
                         ),
                       ),
-                      const SizedBox(width: 11),
+                      const SizedBox(width: 12),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Row(
                             children: [
                               Text(
                                 map[index].title,
+                                overflow: TextOverflow.ellipsis,
                                 style: const TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ],
                           ),
@@ -65,7 +71,7 @@ class CardHomeWidget extends StatelessWidget {
                           ),
                           Text(
                             map[index].subtitle,
-                            style: const TextStyle(fontSize: 12),
+                            style: const TextStyle(fontSize: 10),
                           ),
                           const SizedBox(
                             height: 8,
@@ -75,18 +81,18 @@ class CardHomeWidget extends StatelessWidget {
                             style: const TextStyle(
                                 fontSize: 12, color: Colors.grey),
                           ),
-                          const SizedBox(
-                            height: 17,
-                          ),
+                          const SizedBox(height: 17),
                           Row(
                             children: const [
                               Icon(
                                 Icons.location_on,
                                 color: Colors.red,
+                                size: 15,
                               ),
                               Text(
                                 '2.6 kms away',
-                                style: TextStyle(color: Colors.grey),
+                                style:
+                                    TextStyle(color: Colors.grey, fontSize: 12),
                               )
                             ],
                           )
@@ -96,8 +102,8 @@ class CardHomeWidget extends StatelessWidget {
                   ),
                 ),
                 const Positioned(
-                  right: 20,
-                  top: 20,
+                  right: 8,
+                  top: 14,
                   child: Icon(Icons.favorite_border_rounded),
                 ),
               ],

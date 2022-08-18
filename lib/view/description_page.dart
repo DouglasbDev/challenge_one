@@ -38,6 +38,7 @@ class DescriptionPage extends StatelessWidget {
                   ),
                 )),
             Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
                   padding: const EdgeInsets.only(right: 20, left: 15),
@@ -126,39 +127,46 @@ class DescriptionPage extends StatelessWidget {
                         height: 155,
                         child: const Text(
                           'The Golden Retriever, an exuberant Scottish gundog of great beauty, stands among Americas most popular dog breeds. They are serious workers at hunting and field work, as guides for the blind, and in search-and-rescue, enjoy obedience and other competitive events, and have an endearing love of life when not at work. The Golden Retriever is a sturdy, muscular dog of medium size, famous for the dense, lustrous coat of gold that gives the breed its name. The broad head, with its friendly and intelligent eyes, short ears, and straight muzzle, is a breed hallmark.',
-                          overflow: TextOverflow.clip,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 8,
                           style: TextStyle(fontSize: 12, color: Colors.grey),
                         ),
                       ),
                     )
                   ],
                 ),
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: Container(
-                    height: 85,
-                    width: 230,
-                    decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 241, 67, 67),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(50),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Container(
+                        height: 85,
+                        width: 230,
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 241, 67, 67),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(50),
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(
+                              Icons.pets,
+                              color: Colors.white,
+                            ),
+                            SizedBox(width: 15),
+                            Text(
+                              'ADOPT',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Icon(
-                          Icons.pets,
-                          color: Colors.white,
-                        ),
-                        SizedBox(width: 15),
-                        Text(
-                          'ADOPT',
-                          style: TextStyle(color: Colors.white, fontSize: 20),
-                        )
-                      ],
-                    ),
-                  ),
+                  ],
                 )
               ],
             ),

@@ -124,23 +124,22 @@ class DescriptionPage extends StatelessWidget {
                     Flexible(
                       child: Container(
                         padding: const EdgeInsets.only(left: 18, right: 13.0),
-                        height: 155,
+                        height: 175,
                         child: const Text(
                           'The Golden Retriever, an exuberant Scottish gundog of great beauty, stands among Americas most popular dog breeds. They are serious workers at hunting and field work, as guides for the blind, and in search-and-rescue, enjoy obedience and other competitive events, and have an endearing love of life when not at work. The Golden Retriever is a sturdy, muscular dog of medium size, famous for the dense, lustrous coat of gold that gives the breed its name. The broad head, with its friendly and intelligent eyes, short ears, and straight muzzle, is a breed hallmark.',
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 8,
+                          overflow: TextOverflow.clip,
                           style: TextStyle(fontSize: 12, color: Colors.grey),
                         ),
                       ),
                     )
                   ],
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Align(
-                      alignment: Alignment.bottomRight,
-                      child: Container(
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
                         height: 85,
                         width: 230,
                         decoration: const BoxDecoration(
@@ -165,8 +164,8 @@ class DescriptionPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 )
               ],
             ),

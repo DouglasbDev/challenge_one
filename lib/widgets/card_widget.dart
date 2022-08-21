@@ -7,8 +7,13 @@ class CardHomeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    double widthSize = size.width;
+    double heightSize = size.height;
+
     return Expanded(
       child: ListView.separated(
+        padding: const EdgeInsets.only(top: 27),
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
         separatorBuilder: (context, _) => const SizedBox(
@@ -30,7 +35,7 @@ class CardHomeWidget extends StatelessWidget {
             child: Stack(
               children: [
                 SizedBox(
-                  height: 116,
+                  height: 118,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,

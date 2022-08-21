@@ -15,9 +15,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    double widthSize = size.width;
+    double heightSize = size.height;
+
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 24),
+        padding: EdgeInsets.only(top: 24),
         child: Column(
           children: [
             Padding(
@@ -66,7 +70,6 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 27),
                       const CardHomeWidget()
                     ],
                   ),

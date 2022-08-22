@@ -8,6 +8,7 @@ class CardAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
+      padding: EdgeInsets.only(top: 43),
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
       separatorBuilder: (context, _) => const SizedBox(

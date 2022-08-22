@@ -12,7 +12,7 @@ class FilterMenu extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(17)),
       child: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
         child: SvgPicture.asset(
           'assets/switch.svg',
           color: Colors.grey,

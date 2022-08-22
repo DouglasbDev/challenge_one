@@ -35,7 +35,7 @@ class CardHomeWidget extends StatelessWidget {
             child: Stack(
               children: [
                 SizedBox(
-                  height: 118,
+                  height: 125,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -65,7 +65,7 @@ class CardHomeWidget extends StatelessWidget {
                                 map[index].title,
                                 overflow: TextOverflow.ellipsis,
                                 style: const TextStyle(
-                                  fontSize: 16,
+                                  fontSize: 17,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -86,7 +86,7 @@ class CardHomeWidget extends StatelessWidget {
                             style: const TextStyle(
                                 fontSize: 12, color: Colors.grey),
                           ),
-                          const SizedBox(height: 17),
+                          const SizedBox(height: 10),
                           Row(
                             children: const [
                               Icon(
@@ -109,7 +109,10 @@ class CardHomeWidget extends StatelessWidget {
                 const Positioned(
                   right: 8,
                   top: 14,
-                  child: Icon(Icons.favorite_border_rounded),
+                  child: Icon(
+                    Icons.favorite_border_rounded,
+                    size: 22,
+                  ),
                 ),
               ],
             ),

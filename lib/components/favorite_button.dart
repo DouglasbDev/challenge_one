@@ -9,18 +9,19 @@ class FavoriteButton extends StatelessWidget {
       padding: const EdgeInsets.only(right: 10, top: 10),
       child: Material(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(10),
         child: InkWell(
-          highlightColor: Colors.grey[400],
+          highlightColor: Colors.grey[300],
           onTap: () {},
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(10),
           child: Container(
-            height: 10,
-            width: 50,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
+            height: 47,
+            width: 47,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
             child: const Icon(
               Icons.favorite,
               color: Colors.red,
+              size: 28,
             ),
           ),
         ),

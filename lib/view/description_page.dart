@@ -48,18 +48,17 @@ class DescriptionPage extends StatelessWidget {
                       Text(
                         'Sparky',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 30),
+                            fontWeight: FontWeight.bold, fontSize: 35),
                       ),
                       FaIcon(
                         FontAwesomeIcons.mars,
                         color: Colors.grey,
+                        size: 28,
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: 5,
-                ),
+                const SizedBox(height: 13),
                 Padding(
                   padding: const EdgeInsets.only(right: 20, left: 15),
                   child: Row(
@@ -68,17 +67,21 @@ class DescriptionPage extends StatelessWidget {
                       Text(
                         'Golden Retriever',
                         style: TextStyle(
-                            fontWeight: FontWeight.w500, color: Colors.black87),
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black87,
+                            fontSize: 15),
                       ),
                       Text(
                         ' 8 moths old',
                         style: TextStyle(
-                            fontWeight: FontWeight.w500, color: Colors.black87),
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black87,
+                            fontSize: 15),
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(height: 13),
+                const SizedBox(height: 15),
                 Row(
                   children: const [
                     Padding(
@@ -86,20 +89,21 @@ class DescriptionPage extends StatelessWidget {
                       child: Icon(
                         Icons.location_on,
                         color: Colors.red,
+                        size: 22,
                       ),
                     ),
+                    SizedBox(width: 7),
                     Text(
                       '2.6 kms away',
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(color: Colors.grey, fontSize: 16),
                     )
                   ],
                 ),
-                const SizedBox(height: 43),
                 Row(
                   children: const [
                     SizedBox(
                       height: 250,
-                      width: 90,
+                      width: 112,
                       child: CardAvatar(),
                     )
                   ],
@@ -108,7 +112,7 @@ class DescriptionPage extends StatelessWidget {
                   children: const [
                     Padding(
                       padding: EdgeInsets.only(
-                        left: 18,
+                        left: 22,
                       ),
                       child: Text(
                         'About',
@@ -123,7 +127,7 @@ class DescriptionPage extends StatelessWidget {
                   children: [
                     Flexible(
                       child: Container(
-                        padding: const EdgeInsets.only(left: 18, right: 13.0),
+                        padding: const EdgeInsets.only(left: 22, right: 22),
                         height: 175,
                         child: const Text(
                           'The Golden Retriever, an exuberant Scottish gundog of great beauty, stands among Americas most popular dog breeds. They are serious workers at hunting and field work, as guides for the blind, and in search-and-rescue, enjoy obedience and other competitive events, and have an endearing love of life when not at work. The Golden Retriever is a sturdy, muscular dog of medium size, famous for the dense, lustrous coat of gold that gives the breed its name. The broad head, with its friendly and intelligent eyes, short ears, and straight muzzle, is a breed hallmark.',
@@ -134,37 +138,39 @@ class DescriptionPage extends StatelessWidget {
                     )
                   ],
                 ),
+                SizedBox(
+                  height: 29,
+                ),
                 Align(
                   alignment: Alignment.bottomRight,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Container(
-                        height: 85,
-                        width: 230,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 241, 67, 67),
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(50),
-                          ),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(
-                              Icons.pets,
-                              color: Colors.white,
-                            ),
-                            SizedBox(width: 15),
-                            Text(
-                              'ADOPT',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 20),
-                            )
-                          ],
-                        ),
+                  child: Container(
+                    padding: const EdgeInsets.only(
+                        top: 32, bottom: 22, right: 22, left: 62),
+                    height: 79,
+                    width: 207,
+                    decoration: const BoxDecoration(
+                      color: Color.fromARGB(255, 241, 67, 67),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(50),
                       ),
-                    ],
+                    ),
+                    child: Row(
+                      children: const [
+                        Icon(
+                          Icons.pets,
+                          color: Colors.white,
+                          size: 24,
+                        ),
+                        SizedBox(width: 20),
+                        Text(
+                          'ADOPT',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 17,
+                              fontWeight: FontWeight.w500),
+                        )
+                      ],
+                    ),
                   ),
                 )
               ],

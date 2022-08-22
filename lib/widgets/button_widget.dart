@@ -26,19 +26,19 @@ class ButtonWidget extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(17),
                   ),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 15),
-                        child: items[index].icon,
-                      ),
-                      const SizedBox(
-                        width: 9,
-                      ),
-                      Text(
-                        items[index].title,
-                      ),
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      children: [
+                        items[index].icon,
+                        const SizedBox(
+                          width: 9,
+                        ),
+                        Text(
+                          items[index].title,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

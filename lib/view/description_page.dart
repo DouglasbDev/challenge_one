@@ -1,8 +1,10 @@
+import 'package:desafio/components/button_botton.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../components/card_avatar.dart';
 import '../components/favorite_button.dart';
+import '../controller/card_avatar_list.dart';
 
 class DescriptionPage extends StatelessWidget {
   const DescriptionPage({super.key});
@@ -10,6 +12,7 @@ class DescriptionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: ButtonBotton(),
       backgroundColor: Colors.white,
       appBar: AppBar(
         foregroundColor: Colors.grey,
@@ -100,12 +103,21 @@ class DescriptionPage extends StatelessWidget {
                   ],
                 ),
                 Row(
-                  children: const [
+                  children: [
                     SizedBox(
                       height: 250,
                       width: 112,
-                      child: CardAvatar(),
-                    )
+                      child: ListView.separated(
+                          padding: EdgeInsets.only(top: 43),
+                          scrollDirection: Axis.vertical,
+                          shrinkWrap: true,
+                          separatorBuilder: (context, _) => const SizedBox(
+                                height: 5,
+                              ),
+                          itemCount: avatar.length,
+                          itemBuilder: (context, index) =>
+                              CardAvatarWidget(cardavatar: avatar[index])),
+                    ),
                   ],
                 ),
                 Row(
@@ -138,41 +150,6 @@ class DescriptionPage extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(
-                  height: 29,
-                ),
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: Container(
-                    padding: const EdgeInsets.only(
-                        top: 32, bottom: 22, right: 22, left: 62),
-                    height: 79,
-                    width: 207,
-                    decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 241, 67, 67),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(50),
-                      ),
-                    ),
-                    child: Row(
-                      children: const [
-                        Icon(
-                          Icons.pets,
-                          color: Colors.white,
-                          size: 24,
-                        ),
-                        SizedBox(width: 20),
-                        Text(
-                          'ADOPT',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 17,
-                              fontWeight: FontWeight.w500),
-                        )
-                      ],
-                    ),
-                  ),
-                )
               ],
             ),
           ],

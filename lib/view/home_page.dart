@@ -1,7 +1,9 @@
+import 'package:desafio/controller/button_list.dart';
 import 'package:flutter/material.dart';
 
 import '../components/circle_avatar_widget.dart';
 import '../components/filter_menu.dart';
+import '../controller/card_home_list.dart';
 import '../widgets/button_widget.dart';
 import '../widgets/card_widget.dart';
 
@@ -21,7 +23,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(top: 24),
+        padding: const EdgeInsets.only(top: 24),
         child: Column(
           children: [
             Padding(
@@ -60,17 +62,37 @@ class _HomePageState extends State<HomePage> {
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
-                          children: const [
+                          children: [
                             FilterMenu(),
                             SizedBox(width: 17),
                             SizedBox(
-                              height: 46,
-                              child: ButtonWidget(),
-                            )
+                                height: 46,
+                                child: ListView.separated(
+                                  shrinkWrap: true,
+                                  scrollDirection: Axis.horizontal,
+                                  separatorBuilder: (context, _) =>
+                                      const SizedBox(
+                                    width: 20,
+                                  ),
+                                  itemCount: items.length,
+                                  itemBuilder: (context, index) =>
+                                      ButtonWidget(button: items[index]),
+                                ))
                           ],
                         ),
                       ),
-                      const CardHomeWidget()
+                      Expanded(
+                        child: ListView.separated(
+                            padding: const EdgeInsets.only(top: 27),
+                            shrinkWrap: true,
+                            scrollDirection: Axis.vertical,
+                            separatorBuilder: (context, _) => const SizedBox(
+                                  height: 22,
+                                ),
+                            itemCount: map.length,
+                            itemBuilder: (context, index) =>
+                                CardHomeWidget(card: map[index])),
+                      ),
                     ],
                   ),
                 ),

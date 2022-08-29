@@ -12,7 +12,6 @@ class CardHomeWidget extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     double widthSize = size.width;
     double heightSize = size.height;
-
     return Material(
       color: Colors.white,
       borderRadius: BorderRadius.circular(14),
@@ -27,7 +26,7 @@ class CardHomeWidget extends StatelessWidget {
         child: Stack(
           children: [
             SizedBox(
-              height: 125,
+              height: 118,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -86,6 +85,7 @@ class CardHomeWidget extends StatelessWidget {
                             color: Colors.red,
                             size: 15,
                           ),
+                          SizedBox(height: 17),
                           Text(
                             '2.6 kms away',
                             style: TextStyle(color: Colors.grey, fontSize: 12),
@@ -98,8 +98,8 @@ class CardHomeWidget extends StatelessWidget {
               ),
             ),
             const Positioned(
-              right: 8,
-              top: 14,
+              right: 18,
+              top: 17,
               child: Icon(
                 Icons.favorite_border_rounded,
                 size: 22,

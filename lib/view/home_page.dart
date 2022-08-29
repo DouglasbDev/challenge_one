@@ -1,4 +1,5 @@
 import 'package:desafio/controller/button_list.dart';
+import 'package:desafio/widgets/home_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../components/circle_avatar_widget.dart';
@@ -22,27 +23,35 @@ class _HomePageState extends State<HomePage> {
     double heightSize = size.height;
 
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(top: 24),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 30),
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            pinned: false,
+            expandedHeight: 102,
+            backgroundColor: Colors.white,
+            title: Padding(
+              padding: const EdgeInsets.only(top: 10),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Icon(Icons.menu),
+                  const Icon(
+                    Icons.menu,
+                    color: Colors.black,
+                  ),
                   Column(
                     children: const [
+                      SizedBox(height: 9),
                       Text(
                         'Location',
-                        style: TextStyle(color: Colors.grey),
+                        style: TextStyle(color: Colors.grey, fontSize: 11),
                       ),
                       SizedBox(height: 9),
                       Text(
                         'Cameron St., Boston',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 18),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                            color: Colors.black),
                       )
                     ],
                   ),
@@ -50,56 +59,9 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            Expanded(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 13, vertical: 21),
-                  color: Colors.grey[200],
-                  child: Column(
-                    children: [
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: [
-                            FilterMenu(),
-                            SizedBox(width: 17),
-                            SizedBox(
-                                height: 46,
-                                child: ListView.separated(
-                                  shrinkWrap: true,
-                                  scrollDirection: Axis.horizontal,
-                                  separatorBuilder: (context, _) =>
-                                      const SizedBox(
-                                    width: 20,
-                                  ),
-                                  itemCount: items.length,
-                                  itemBuilder: (context, index) =>
-                                      ButtonWidget(button: items[index]),
-                                ))
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: ListView.separated(
-                            padding: const EdgeInsets.only(top: 27),
-                            shrinkWrap: true,
-                            scrollDirection: Axis.vertical,
-                            separatorBuilder: (context, _) => const SizedBox(
-                                  height: 22,
-                                ),
-                            itemCount: map.length,
-                            itemBuilder: (context, index) =>
-                                CardHomeWidget(card: map[index])),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            )
-          ],
-        ),
+          ),
+          const SliverToBoxAdapter(child: HomePageWidget()),
+        ],
       ),
     );
   }

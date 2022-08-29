@@ -15,6 +15,7 @@ class DescriptionPage extends StatelessWidget {
     double widthSize = size.width;
     double heightSize = size.height;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
           CustomScrollView(

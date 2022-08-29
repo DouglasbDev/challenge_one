@@ -5,9 +5,12 @@ class CircleAvatarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    double widthSize = size.width;
+    double heightSize = size.height;
     return Container(
-      height: 43,
-      width: 43,
+      height: size.width * 0.114,
+      width: size.width * 0.114,
       decoration: ShapeDecoration(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),

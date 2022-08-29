@@ -21,8 +21,8 @@ class DescriptionPageWidget extends StatelessWidget {
               right: 20,
               top: 100,
               child: Container(
-                height: 300,
-                width: 180,
+                height: size.height * 0.449,
+                width: size.width * 0.48,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.cover,
@@ -36,16 +36,19 @@ class DescriptionPageWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(right: 20, left: 15),
+                  padding: EdgeInsets.only(
+                      right: size.width * 0.0533, left: size.width * 0.04),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Text(
                         'Sparky',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 35),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 35,
+                            color: Colors.grey[800]),
                       ),
-                      FaIcon(
+                      const FaIcon(
                         FontAwesomeIcons.mars,
                         color: Colors.grey,
                         size: 28,
@@ -53,52 +56,53 @@ class DescriptionPageWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 13),
+                SizedBox(height: size.height * 0.0119),
                 Padding(
-                  padding: const EdgeInsets.only(right: 20, left: 15),
+                  padding: EdgeInsets.only(
+                      right: size.width * 0.0533, left: size.width * 0.04),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Text(
                         'Golden Retriever',
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
-                            color: Colors.black87,
+                            color: Colors.grey[800],
                             fontSize: 15),
                       ),
                       Text(
                         ' 8 moths old',
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
-                            color: Colors.black87,
+                            color: Colors.grey[800],
                             fontSize: 15),
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(height: 15),
+                SizedBox(height: size.height * 0.0119),
                 Row(
-                  children: const [
+                  children: [
                     Padding(
-                      padding: EdgeInsets.only(left: 8.0),
-                      child: Icon(
+                      padding: EdgeInsets.only(left: size.width * 0.04),
+                      child: const Icon(
                         Icons.location_on,
                         color: Colors.red,
                         size: 22,
                       ),
                     ),
-                    SizedBox(width: 7),
-                    Text(
+                    SizedBox(width: size.width * 0.0186),
+                    const Text(
                       '2.6 kms away',
-                      style: TextStyle(color: Colors.grey, fontSize: 16),
+                      style: TextStyle(color: Colors.grey, fontSize: 12),
                     )
                   ],
                 ),
                 Row(
                   children: [
                     SizedBox(
-                      height: 250,
-                      width: 112,
+                      height: size.height * 0.374,
+                      width: size.width * 0.298,
                       child: ShaderMask(
                         blendMode: BlendMode.dstIn,
                         shaderCallback: (Rect bounds) {
@@ -109,10 +113,6 @@ class DescriptionPageWidget extends StatelessWidget {
                               ],
                                   colors: <Color>[
                                 Colors.white,
-                                // Colors.white,
-                                // Colors.white,
-                                // Colors.white,
-                                // Colors.white,
                                 Colors.transparent,
                               ],
                                   tileMode: TileMode.mirror,
@@ -121,11 +121,11 @@ class DescriptionPageWidget extends StatelessWidget {
                               .createShader(bounds);
                         },
                         child: ListView.separated(
-                            padding: const EdgeInsets.only(top: 43),
+                            padding: EdgeInsets.only(top: size.height * 0.064),
                             scrollDirection: Axis.vertical,
                             shrinkWrap: true,
-                            separatorBuilder: (context, _) => const SizedBox(
-                                  height: 5,
+                            separatorBuilder: (context, _) => SizedBox(
+                                  height: size.height * 0.020,
                                 ),
                             itemCount: avatar.length,
                             itemBuilder: (context, index) =>
@@ -134,14 +134,14 @@ class DescriptionPageWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 25),
+                SizedBox(height: size.height * 0.0374),
                 Row(
-                  children: const [
+                  children: [
                     Padding(
                       padding: EdgeInsets.only(
-                        left: 22,
+                        left: size.width * 0.0586,
                       ),
-                      child: Text(
+                      child: const Text(
                         'About',
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
@@ -149,18 +149,18 @@ class DescriptionPageWidget extends StatelessWidget {
                     )
                   ],
                 ),
-                const SizedBox(height: 10),
+                SizedBox(height: size.height * 0.0149),
                 Row(
                   children: [
                     Flexible(
                       child: Container(
-                        padding: const EdgeInsets.only(
-                          left: 22,
-                          right: 22,
+                        padding: EdgeInsets.only(
+                          left: size.width * 0.0586,
+                          right: size.width * 0.0586,
                         ),
-                        height: 170,
+                        height: size.height * 0.254,
                         child: const Text(
-                          'The Golden Retriever, an exuberant Scottish gundog of great beauty, stands among Americas most popular dog breeds. They are serious workers at hunting and field work, as guides for the blind, and in search-and-rescue, enjoy obedience and other competitive events, and have an endearing love of life when not at work. The Golden Retriever is a sturdy, muscular dog of medium size, famous for the dense, lustrous coat of gold that gives the breed its name. The broad head, with its friendly and intelligent eyes, short ears, and straight muzzle, is a breed hallmark.',
+                          'The Golden Retriever, an exuberant Scottish gundog of great beauty, stands among Americas most popular dog breeds. They are serious workers at hunting and field work, as guides for the blind, and in search-and-rescue, enjoy obedience and other competitive events, and have an endearing love of life when not at work.',
                           overflow: TextOverflow.fade,
                           style: TextStyle(fontSize: 15, color: Colors.grey),
                         ),

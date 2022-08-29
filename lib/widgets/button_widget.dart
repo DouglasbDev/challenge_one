@@ -9,6 +9,9 @@ class ButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    double widthSize = size.width;
+    double heightSize = size.height;
     return Material(
       color: Colors.white,
       borderRadius: BorderRadius.circular(17),
@@ -17,7 +20,7 @@ class ButtonWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(17),
         highlightColor: Colors.grey[200],
         child: Container(
-          width: 86,
+          width: size.width * 0.22933,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(17),
           ),
@@ -26,11 +29,15 @@ class ButtonWidget extends StatelessWidget {
             child: Row(
               children: [
                 button.icon,
-                const SizedBox(
-                  width: 9,
+                SizedBox(
+                  width: size.width * 0.024,
                 ),
                 Text(
                   button.title,
+                  style: TextStyle(
+                      color: Colors.grey[800],
+                      fontWeight: FontWeight.w500,
+                      fontSize: 13),
                 ),
               ],
             ),

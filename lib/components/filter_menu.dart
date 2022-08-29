@@ -6,13 +6,17 @@ class FilterMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    double widthSize = size.width;
+    double heightSize = size.height;
     return Container(
-      height: 45,
-      width: 45,
+      height: size.width * 0.12,
+      width: size.width * 0.12,
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(17)),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+        padding: EdgeInsets.symmetric(
+            horizontal: size.width * 0.032, vertical: size.height * 0.0179),
         child: SvgPicture.asset(
           'assets/switch.svg',
           color: Colors.grey,

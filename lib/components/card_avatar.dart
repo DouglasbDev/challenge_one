@@ -10,20 +10,22 @@ class CardAvatarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    double widthSize = size.width;
+    double heightSize = size.height;
     return Column(
       children: [
         SizedBox(
-          height: 79,
-          width: 79,
+          height: size.width * 0.210,
+          width: size.width * 0.210,
           child: AspectRatio(
             aspectRatio: 3 / 4,
             child: Container(
-              height: 79,
-              width: 79,
+              height: size.width * 0.210,
+              width: size.width * 0.210,
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.white,
-                  width: 1,
                 ),
                 borderRadius: BorderRadius.circular(20),
                 image: DecorationImage(

@@ -19,8 +19,8 @@ class HomePageWidget extends StatelessWidget {
           color: Colors.grey[200],
           borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(20), topRight: Radius.circular(20))),
-      padding:
-          EdgeInsets.symmetric(horizontal: size.width * 0.08, vertical: 21),
+      padding: EdgeInsets.symmetric(
+          horizontal: size.width * 0.08, vertical: size.height * 0.0314),
       child: Column(
         children: [
           SingleChildScrollView(
@@ -29,14 +29,14 @@ class HomePageWidget extends StatelessWidget {
             child: Row(
               children: [
                 const FilterMenu(),
-                const SizedBox(width: 17),
+                SizedBox(width: size.width * 0.0453),
                 SizedBox(
-                    height: 46,
+                    height: size.height * 0.0689,
                     child: ListView.separated(
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
-                      separatorBuilder: (context, _) => const SizedBox(
-                        width: 20,
+                      separatorBuilder: (context, _) => SizedBox(
+                        width: size.width * 0.0533,
                       ),
                       itemCount: items.length,
                       itemBuilder: (context, index) =>
@@ -48,11 +48,11 @@ class HomePageWidget extends StatelessWidget {
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: ListView.separated(
-                padding: const EdgeInsets.only(top: 27),
+                padding: EdgeInsets.only(top: size.height * 0.0404),
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
-                separatorBuilder: (context, _) => const SizedBox(
-                      height: 22,
+                separatorBuilder: (context, _) => SizedBox(
+                      height: size.height * 0.0329,
                     ),
                 itemCount: map.length,
                 itemBuilder: (context, index) =>

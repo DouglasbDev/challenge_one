@@ -26,16 +26,16 @@ class CardHomeWidget extends StatelessWidget {
         child: Stack(
           children: [
             SizedBox(
-              height: 118,
+              height: size.width * 0.314,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
+                    padding: EdgeInsets.only(left: size.width * 0.0213),
                     child: Container(
-                      width: 102,
-                      height: 99,
+                      width: size.width * 0.272,
+                      height: size.height * 0.1499,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(17),
                         image: DecorationImage(
@@ -45,7 +45,7 @@ class CardHomeWidget extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(width: 12),
+                  SizedBox(width: size.width * 0.032),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -55,40 +55,48 @@ class CardHomeWidget extends StatelessWidget {
                           Text(
                             card.title,
                             overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.bold,
-                            ),
+                            style: TextStyle(
+                                fontSize: 17,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey[900]),
                           ),
                         ],
                       ),
-                      const SizedBox(
-                        height: 9,
+                      SizedBox(
+                        height: size.height * 0.00599,
                       ),
                       Text(
                         card.subtitle,
-                        style: const TextStyle(fontSize: 10),
+                        style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.grey[800]),
                       ),
-                      const SizedBox(
-                        height: 8,
+                      SizedBox(
+                        height: size.height * 0.00599,
                       ),
                       Text(
                         card.infotitle,
-                        style:
-                            const TextStyle(fontSize: 12, color: Colors.grey),
+                        style: const TextStyle(
+                            fontSize: 10,
+                            color: Colors.grey,
+                            fontWeight: FontWeight.w400),
                       ),
-                      const SizedBox(height: 10),
+                      SizedBox(height: size.height * 0.0254),
                       Row(
-                        children: const [
-                          Icon(
+                        children: [
+                          const Icon(
                             Icons.location_on,
                             color: Colors.red,
                             size: 15,
                           ),
-                          SizedBox(height: 17),
-                          Text(
+                          SizedBox(height: size.height * 0.0254),
+                          const Text(
                             '2.6 kms away',
-                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                            style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400),
                           )
                         ],
                       )
@@ -97,12 +105,13 @@ class CardHomeWidget extends StatelessWidget {
                 ],
               ),
             ),
-            const Positioned(
+            Positioned(
               right: 18,
               top: 17,
               child: Icon(
                 Icons.favorite_border_rounded,
                 size: 22,
+                color: Colors.grey[400],
               ),
             ),
           ],

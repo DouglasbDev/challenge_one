@@ -27,31 +27,31 @@ class _HomePageState extends State<HomePage> {
         slivers: [
           SliverAppBar(
             pinned: false,
-            expandedHeight: 102,
+            expandedHeight: size.height * 0.1529,
             backgroundColor: Colors.white,
             title: Padding(
-              padding: const EdgeInsets.only(top: 10),
+              padding: EdgeInsets.only(top: size.height * 0.0149),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Icon(
+                  Icon(
                     Icons.menu,
-                    color: Colors.black,
+                    color: Colors.grey[700],
                   ),
                   Column(
-                    children: const [
-                      SizedBox(height: 9),
-                      Text(
+                    children: [
+                      SizedBox(height: size.height * 0.0134),
+                      const Text(
                         'Location',
                         style: TextStyle(color: Colors.grey, fontSize: 11),
                       ),
-                      SizedBox(height: 9),
+                      SizedBox(height: size.height * 0.0134),
                       Text(
                         'Cameron St., Boston',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
-                            color: Colors.black),
+                            color: Colors.grey[800]),
                       )
                     ],
                   ),

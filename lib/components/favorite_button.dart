@@ -5,8 +5,12 @@ class FavoriteButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    double widthSize = size.width;
+    double heightSize = size.height;
     return Padding(
-      padding: const EdgeInsets.only(right: 10, top: 10),
+      padding: EdgeInsets.only(
+          right: size.width * 0.0266, top: size.height * 0.0149),
       child: Material(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -15,8 +19,8 @@ class FavoriteButton extends StatelessWidget {
           onTap: () {},
           borderRadius: BorderRadius.circular(10),
           child: Container(
-            height: 47,
-            width: 47,
+            height: size.width * 0.125,
+            width: size.width * 0.125,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
             child: const Icon(
               Icons.favorite,

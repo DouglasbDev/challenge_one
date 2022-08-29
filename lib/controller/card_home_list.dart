@@ -31,11 +31,4 @@ List<CardHome> map = [
     subtitle: 'Beagle',
     infotitle: 'Female, 5 moths old',
   ),
-  CardHome(
-    image:
-        'https://img.freepik.com/fotos-premium/foto-de-estudio-de-cachorro-beagle-em-fundo-verde-do-estudio_155003-36319.jpg?w=1380',
-    title: 'Luna',
-    subtitle: 'Beagle',
-    infotitle: 'Female, 5 moths old',
-  ),
 ];

@@ -5,6 +5,14 @@ import '../model/button_class.dart';
 List<ButtonItem> items = [
   ButtonItem(
     icon: SvgPicture.asset(
+      'assets/switch.svg',
+      width: 20,
+      height: 20,
+      color: Colors.grey,
+    ),
+  ),
+  ButtonItem(
+    icon: SvgPicture.asset(
       'assets/cao.svg',
       width: 20,
       height: 20,

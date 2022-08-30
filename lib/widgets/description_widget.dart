@@ -5,8 +5,8 @@ import '../components/button_bottom.dart';
 import '../components/card_avatar.dart';
 import '../controller/card_avatar_list.dart';
 
-class DescriptionPageWidget extends StatelessWidget {
-  const DescriptionPageWidget({super.key});
+class DescriptionBodyWidget extends StatelessWidget {
+  const DescriptionBodyWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,16 +18,25 @@ class DescriptionPageWidget extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-              right: 20,
+              right: -50,
               top: 100,
               child: Container(
-                height: size.height * 0.449,
+                height: size.width * 0.773,
+                width: size.width * 0.693,
+                decoration:
+                    BoxDecoration(color: Colors.yellow, shape: BoxShape.circle),
+              ),
+            ),
+            Positioned(
+              right: -10,
+              top: 100,
+              child: Container(
+                height: size.width * 0.8,
                 width: size.width * 0.48,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage(
-                        'https://img.freepik.com/fotos-gratis/retriever-dourado-bonito_144627-26658.jpg?w=740&t=st=1660158825~exp=1660159425~hmac=d02ffe13579e6f7bd6d52e751aa11ccd0676407aa8939dd677758b69b924eab8'),
+                    image: AssetImage('assets/dog-projeto-.png'),
                   ),
                 ),
               ),
@@ -94,14 +103,14 @@ class DescriptionPageWidget extends StatelessWidget {
                     SizedBox(width: size.width * 0.0186),
                     const Text(
                       '2.6 kms away',
-                      style: TextStyle(color: Colors.grey, fontSize: 12),
+                      style: TextStyle(color: Colors.grey, fontSize: 14),
                     )
                   ],
                 ),
                 Row(
                   children: [
                     SizedBox(
-                      height: size.height * 0.374,
+                      height: 280,
                       width: size.width * 0.298,
                       child: ShaderMask(
                         blendMode: BlendMode.dstIn,

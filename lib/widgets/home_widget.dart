@@ -6,8 +6,8 @@ import '../controller/card_home_list.dart';
 import 'button_widget.dart';
 import 'card_widget.dart';
 
-class HomePageWidget extends StatelessWidget {
-  const HomePageWidget({super.key});
+class HomeBodyWidget extends StatelessWidget {
+  const HomeBodyWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,24 +26,19 @@ class HomePageWidget extends StatelessWidget {
           SingleChildScrollView(
             clipBehavior: Clip.none,
             scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                const FilterMenu(),
-                SizedBox(width: size.width * 0.0453),
-                SizedBox(
-                    height: size.height * 0.0689,
-                    child: ListView.separated(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      separatorBuilder: (context, _) => SizedBox(
-                        width: size.width * 0.0533,
-                      ),
-                      itemCount: items.length,
-                      itemBuilder: (context, index) =>
-                          ButtonWidget(button: items[index]),
-                    ))
-              ],
-            ),
+            child: SizedBox(
+                height: size.width * 0.128,
+                child: ListView.separated(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  separatorBuilder: (context, _) => SizedBox(
+                    width: size.width * 0.0533,
+                  ),
+                  itemCount: items.length,
+                  itemBuilder: (context, index) => ButtonWidget(
+                    button: items[index],
+                  ),
+                )),
           ),
           SingleChildScrollView(
             scrollDirection: Axis.vertical,

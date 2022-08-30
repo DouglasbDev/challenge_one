@@ -32,10 +32,12 @@ class DescriptionPage extends StatelessWidget {
                 backgroundColor: Colors.white,
                 foregroundColor: Colors.grey,
                 actions: [
-                  FavoriteButton(),
+                  FavoriteButton(
+                    isFavorite: true,
+                  ),
                 ],
               ),
-              SliverToBoxAdapter(child: DescriptionPageWidget()),
+              const SliverToBoxAdapter(child: DescriptionBodyWidget()),
             ],
           ),
           Positioned(

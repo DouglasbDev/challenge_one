@@ -4,12 +4,12 @@ import '../model/card_home_model.dart';
 
 List<CardHome> map = [
   CardHome(
-    image:
-        'https://img.freepik.com/fotos-gratis/bela-foto-de-um-golden-retriever-usando-oculos-escuros-e-um-lenco-vermelho_181624-24610.jpg?w=900&t=st=1660518799~exp=1660519399~hmac=5e97cbce9de7ef0fc85aae4677e39297456106d2a12e0b0c69d7b318e95814bc',
-    title: 'Sparky',
-    subtitle: 'Golden Retriever',
-    infotitle: 'Male, 8 moths old',
-  ),
+      image:
+          'https://img.freepik.com/fotos-gratis/bela-foto-de-um-golden-retriever-usando-oculos-escuros-e-um-lenco-vermelho_181624-24610.jpg?w=900&t=st=1660518799~exp=1660519399~hmac=5e97cbce9de7ef0fc85aae4677e39297456106d2a12e0b0c69d7b318e95814bc',
+      title: 'Sparkya',
+      subtitle: 'Golden Retriever',
+      infotitle: 'Male, 8 moths old',
+      favorite: true),
   CardHome(
     image:
         'https://img.freepik.com/fotos-gratis/lindo-retrato-de-animal-de-estimacao-isolado_23-2149192357.jpg?w=1380&t=st=1659909801~exp=1659910401~hmac=25aa1869caffe2166baf6fc3571371c404a0e1e528df1496d417a20ef833c0ec',

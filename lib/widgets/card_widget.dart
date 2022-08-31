@@ -52,35 +52,46 @@ class CardHomeWidget extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Text(
-                            card.title,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey[900]),
+                          SizedBox(
+                            width: size.width * 0.32,
+                            child: Text(
+                              card.title,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey[900]),
+                            ),
                           ),
                         ],
                       ),
                       SizedBox(
                         height: size.height * 0.00599,
                       ),
-                      Text(
-                        card.subtitle,
-                        style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.grey[800]),
+                      SizedBox(
+                        width: size.width * 0.32,
+                        child: Text(
+                          card.subtitle,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.grey[800]),
+                        ),
                       ),
                       SizedBox(
                         height: size.height * 0.00599,
                       ),
-                      Text(
-                        card.infotitle,
-                        style: const TextStyle(
-                            fontSize: 10,
-                            color: Colors.grey,
-                            fontWeight: FontWeight.w400),
+                      SizedBox(
+                        width: size.width * 0.32,
+                        child: Text(
+                          card.infotitle,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                              fontSize: 10,
+                              color: Colors.grey,
+                              fontWeight: FontWeight.w400),
+                        ),
                       ),
                       SizedBox(height: size.height * 0.0254),
                       Row(
@@ -91,12 +102,16 @@ class CardHomeWidget extends StatelessWidget {
                             size: 15,
                           ),
                           SizedBox(height: size.height * 0.0254),
-                          const Text(
-                            '2.6 kms away',
-                            style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 10,
-                                fontWeight: FontWeight.w400),
+                          SizedBox(
+                            width: size.width * 0.32,
+                            child: const Text(
+                              '2.6 kms away',
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w400),
+                            ),
                           )
                         ],
                       )

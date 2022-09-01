@@ -14,9 +14,9 @@ class CardHomeWidget extends StatelessWidget {
     double heightSize = size.height;
     return Material(
       color: Colors.white,
-      borderRadius: BorderRadius.circular(17),
+      borderRadius: BorderRadius.circular(size.width * 0.0453),
       child: InkWell(
-        borderRadius: BorderRadius.circular(17),
+        borderRadius: BorderRadius.circular(size.width * 0.0453),
         onTap: () {
           Navigator.push(
             context,

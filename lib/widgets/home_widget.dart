@@ -27,7 +27,7 @@ class HomeBodyWidget extends StatelessWidget {
             clipBehavior: Clip.none,
             scrollDirection: Axis.horizontal,
             child: SizedBox(
-                height: size.width * 0.128,
+                height: size.width * 0.122,
                 child: ListView.separated(
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,

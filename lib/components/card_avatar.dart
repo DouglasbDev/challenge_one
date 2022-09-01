@@ -27,7 +27,7 @@ class CardAvatarWidget extends StatelessWidget {
                 border: Border.all(
                   color: Colors.white,
                 ),
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(size.width * 0.0533),
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: NetworkImage(cardavatar.urlImage),

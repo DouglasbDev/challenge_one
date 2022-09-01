@@ -13,7 +13,8 @@ class FilterMenu extends StatelessWidget {
       height: size.width * 0.12,
       width: size.width * 0.12,
       decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(17)),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(size.width * 0.0453)),
       child: Padding(
         padding: EdgeInsets.symmetric(
             horizontal: size.width * 0.032, vertical: size.height * 0.0179),

@@ -14,11 +14,11 @@ class FavoriteButton extends StatelessWidget {
           right: size.width * 0.0266, top: size.height * 0.0149),
       child: Material(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(size.width * 0.0266),
         child: InkWell(
           highlightColor: Colors.grey[300],
           onTap: () {},
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(size.width * 0.0266),
           child: Container(
             height: size.width * 0.125,
             width: size.width * 0.125,

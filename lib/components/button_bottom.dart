@@ -17,10 +17,10 @@ class ButtonBottom extends StatelessWidget {
       ),
       width: size.width * 0.54,
       height: size.height * 0.118,
-      decoration: const BoxDecoration(
-        color: Color.fromARGB(255, 241, 67, 67),
+      decoration: BoxDecoration(
+        color: const Color.fromARGB(255, 241, 67, 67),
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(50),
+          topLeft: Radius.circular(size.width * 0.133),
         ),
       ),
       child: Row(

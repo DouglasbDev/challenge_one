@@ -110,7 +110,7 @@ class DescriptionBodyWidget extends StatelessWidget {
                 Row(
                   children: [
                     SizedBox(
-                      height: 280,
+                      height: size.width * 0.72,
                       width: size.width * 0.298,
                       child: ShaderMask(
                         blendMode: BlendMode.dstIn,
